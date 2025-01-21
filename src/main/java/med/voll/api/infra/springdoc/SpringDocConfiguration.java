@@ -13,14 +13,6 @@ import org.springframework.context.annotation.Configuration;
 public class SpringDocConfiguration {
 
     @Bean
-    public OpenAPI customOpenAPi() {
-        return new OpenAPI()
-                .components(new Components()
-                        .addSecuritySchemes("bearer-key",
-                                new SecurityScheme().type(SecurityScheme.Type.HTTP).scheme("bearer").bearerFormat("JWT")));
-    }
-
-    @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .components(new Components()
